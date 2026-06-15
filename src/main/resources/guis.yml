@@ -1,0 +1,86 @@
+settings:
+  border-material: BLACK_STAINED_GLASS_PANE
+  filler-name: "<dark_gray>"
+  quest-slots:
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+
+main:
+  title: "<dark_gray>Quests"
+  size: 54
+  items:
+    daily:
+      material: SUNFLOWER
+      display-name: "<gold>Daily Quests"
+      lore:
+        - "<gray>Complete quests that refresh each day."
+        - "<gray>Completed: <yellow>%daily_completed%</yellow>"
+      slot: 20
+      left-click-actions:
+        - "OPEN_GUI:daily"
+    weekly:
+      material: CLOCK
+      display-name: "<yellow>Weekly Quests"
+      lore:
+        - "<gray>Longer goals with larger rewards."
+        - "<gray>Completed: <yellow>%weekly_completed%</yellow>"
+      slot: 22
+      left-click-actions:
+        - "OPEN_GUI:weekly"
+    tracked:
+      material: COMPASS
+      display-name: "<aqua>Tracked Quest"
+      lore:
+        - "<gray>%tracked_quest%"
+      slot: 24
+      left-click-actions:
+        - "OPEN_GUI:quest_detail:%tracked_quest%"
+    stats:
+      material: PLAYER_HEAD
+      skull-owner: "%player%"
+      display-name: "<green>Your Stats"
+      lore:
+        - "<gray>Total completed: <yellow>%total_completed%</yellow>"
+        - "<gray>Daily streak: <yellow>%daily_streak%</yellow>"
+        - "<gray>Best streak: <yellow>%best_daily_streak%</yellow>"
+      slot: 31
+      left-click-actions:
+        - "REFRESH"
+    close:
+      material: BARRIER
+      display-name: "<red>Close"
+      lore: []
+      slot: 49
+      left-click-actions:
+        - "CLOSE"
+
+daily:
+  title: "<dark_gray>Daily Quests"
+  size: 54
+
+weekly:
+  title: "<dark_gray>Weekly Quests"
+  size: 54
+
+detail:
+  title: "<dark_gray>Quest Detail"
+  size: 45

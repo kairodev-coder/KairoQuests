@@ -1,0 +1,11 @@
+settings:
+  save-interval-seconds: 120
+
+quests:
+  daily-reset-time: "00:00"
+  weekly-reset-day: "MONDAY"
+  weekly-reset-time: "00:00"
+
+hooks:
+  placeholderapi: true
+  vault: true

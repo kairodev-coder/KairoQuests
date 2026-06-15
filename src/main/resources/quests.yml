@@ -1,0 +1,211 @@
+quests:
+  daily_miner:
+    enabled: true
+    display-name: "<gold>Daily Miner"
+    description: "Break 250 stone."
+    category: DAILY
+    type: BREAK_BLOCK
+    target: STONE
+    amount: 250
+    reset-type: DAILY
+    reset-interval: 86400
+    permission-required: false
+    permission: ""
+    auto-start: true
+    auto-claim: false
+    rewards:
+      - type: MONEY
+        value: "500"
+      - type: EXPERIENCE
+        value: "250"
+      - type: MESSAGE
+        value: "<green>You completed %quest_display%."
+    gui-material: STONE
+    custom-model-data: 0
+    lore:
+      - "<gray>Break stone anywhere in the world."
+      - "<gray>Progress: <green>%quest_progress%</green><dark_gray>/</dark_gray><yellow>%quest_required%</yellow>"
+    completion-message: "<green>You finished %quest_display%."
+    broadcast-completion: false
+    start-actions: []
+    complete-actions:
+      - "SOUND:ENTITY_PLAYER_LEVELUP"
+    claim-actions: []
+  daily_hunter:
+    enabled: true
+    display-name: "<red>Daily Hunter"
+    description: "Kill 25 zombies."
+    category: DAILY
+    type: KILL_MOB
+    target: ZOMBIE
+    amount: 25
+    reset-type: DAILY
+    reset-interval: 86400
+    permission-required: false
+    permission: ""
+    auto-start: true
+    auto-claim: false
+    rewards:
+      - type: MONEY
+        value: "750"
+      - type: ITEM
+        value: "IRON_INGOT:8"
+    gui-material: IRON_SWORD
+    custom-model-data: 0
+    lore:
+      - "<gray>Hunt zombies for the town board."
+      - "<gray>Progress: <green>%quest_progress%</green><dark_gray>/</dark_gray><yellow>%quest_required%</yellow>"
+    completion-message: "<green>You finished %quest_display%."
+    broadcast-completion: false
+    start-actions: []
+    complete-actions:
+      - "SOUND:ENTITY_PLAYER_LEVELUP"
+    claim-actions: []
+  daily_fisher:
+    enabled: true
+    display-name: "<aqua>Daily Fisher"
+    description: "Catch 10 fish."
+    category: DAILY
+    type: FISH_ITEM
+    target: COD
+    amount: 10
+    reset-type: DAILY
+    reset-interval: 86400
+    permission-required: false
+    permission: ""
+    auto-start: true
+    auto-claim: false
+    rewards:
+      - type: MONEY
+        value: "400"
+      - type: ITEM
+        value: "COD:8"
+    gui-material: FISHING_ROD
+    custom-model-data: 0
+    lore:
+      - "<gray>Catch fish from open water."
+      - "<gray>Progress: <green>%quest_progress%</green><dark_gray>/</dark_gray><yellow>%quest_required%</yellow>"
+    completion-message: "<green>You finished %quest_display%."
+    broadcast-completion: false
+    start-actions: []
+    complete-actions:
+      - "SOUND:ENTITY_PLAYER_LEVELUP"
+    claim-actions: []
+  weekly_grinder:
+    enabled: true
+    display-name: "<gold>Weekly Grinder"
+    description: "Kill 250 mobs."
+    category: WEEKLY
+    type: KILL_MOB
+    target: "*"
+    amount: 250
+    reset-type: WEEKLY
+    reset-interval: 604800
+    permission-required: false
+    permission: ""
+    auto-start: true
+    auto-claim: false
+    rewards:
+      - type: COMMAND
+        value: "give %player% diamond 3"
+      - type: MESSAGE
+        value: "<green>You earned three diamonds."
+    gui-material: DIAMOND_SWORD
+    custom-model-data: 0
+    lore:
+      - "<gray>Defeat mobs throughout the week."
+      - "<gray>Progress: <green>%quest_progress%</green><dark_gray>/</dark_gray><yellow>%quest_required%</yellow>"
+    completion-message: "<green>You finished %quest_display%."
+    broadcast-completion: false
+    start-actions: []
+    complete-actions:
+      - "SOUND:ENTITY_PLAYER_LEVELUP"
+    claim-actions: []
+  weekly_farmer:
+    enabled: true
+    display-name: "<green>Weekly Farmer"
+    description: "Harvest 500 wheat."
+    category: WEEKLY
+    type: BREAK_BLOCK
+    target: WHEAT
+    amount: 500
+    reset-type: WEEKLY
+    reset-interval: 604800
+    permission-required: false
+    permission: ""
+    auto-start: true
+    auto-claim: false
+    rewards:
+      - type: MONEY
+        value: "2500"
+      - type: EXPERIENCE
+        value: "1000"
+    gui-material: WHEAT
+    custom-model-data: 0
+    lore:
+      - "<gray>Harvest mature wheat crops."
+      - "<gray>Progress: <green>%quest_progress%</green><dark_gray>/</dark_gray><yellow>%quest_required%</yellow>"
+    completion-message: "<green>You finished %quest_display%."
+    broadcast-completion: false
+    start-actions: []
+    complete-actions:
+      - "SOUND:ENTITY_PLAYER_LEVELUP"
+    claim-actions: []
+  weekly_playtime:
+    enabled: true
+    display-name: "<yellow>Weekly Playtime"
+    description: "Play for 5 hours."
+    category: WEEKLY
+    type: PLAY_TIME
+    target: SECONDS
+    amount: 18000
+    reset-type: WEEKLY
+    reset-interval: 604800
+    permission-required: false
+    permission: ""
+    auto-start: true
+    auto-claim: false
+    rewards:
+      - type: COMMAND
+        value: "give %player% experience_bottle 16"
+    gui-material: CLOCK
+    custom-model-data: 0
+    lore:
+      - "<gray>Stay active during the week."
+      - "<gray>Progress: <green>%quest_progress%</green><dark_gray>/</dark_gray><yellow>%quest_required%</yellow>"
+    completion-message: "<green>You finished %quest_display%."
+    broadcast-completion: false
+    start-actions: []
+    complete-actions:
+      - "SOUND:ENTITY_PLAYER_LEVELUP"
+    claim-actions: []
+  one_time_first_steps:
+    enabled: true
+    display-name: "<green>First Steps"
+    description: "Walk 1,000 blocks."
+    category: ONE_TIME
+    type: WALK_DISTANCE
+    target: BLOCKS
+    amount: 1000
+    reset-type: NONE
+    reset-interval: 0
+    permission-required: false
+    permission: ""
+    auto-start: true
+    auto-claim: false
+    rewards:
+      - type: COMMAND
+        value: "give %player% iron_pickaxe 1"
+      - type: MESSAGE
+        value: "<green>You received an iron pickaxe."
+    gui-material: LEATHER_BOOTS
+    custom-model-data: 0
+    lore:
+      - "<gray>Move around the server to begin."
+      - "<gray>Progress: <green>%quest_progress%</green><dark_gray>/</dark_gray><yellow>%quest_required%</yellow>"
+    completion-message: "<green>You finished %quest_display%."
+    broadcast-completion: false
+    start-actions: []
+    complete-actions:
+      - "SOUND:ENTITY_PLAYER_LEVELUP"
+    claim-actions: []

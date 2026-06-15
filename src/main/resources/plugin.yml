@@ -1,0 +1,48 @@
+name: KairoQuests
+version: ${version}
+main: dev.kairo.kairoquests.KairoQuestsPlugin
+api-version: "1.21"
+author: Kairo
+softdepend:
+  - PlaceholderAPI
+  - Vault
+commands:
+  quests:
+    description: Opens the quest menu.
+    aliases:
+      - quest
+    permission: kairoquests.command.quests
+  daily:
+    description: Opens daily quests.
+    permission: kairoquests.command.daily
+  weekly:
+    description: Opens weekly quests.
+    permission: kairoquests.command.weekly
+  kairoquests:
+    description: Administrative KairoQuests command.
+    permission: kairoquests.admin
+permissions:
+  kairoquests.command.quests:
+    default: true
+  kairoquests.command.daily:
+    default: true
+  kairoquests.command.weekly:
+    default: true
+  kairoquests.command.progress:
+    default: true
+  kairoquests.command.claim:
+    default: true
+  kairoquests.command.track:
+    default: true
+  kairoquests.admin:
+    default: op
+  kairoquests.admin.reload:
+    default: op
+  kairoquests.admin.reset:
+    default: op
+  kairoquests.admin.progress:
+    default: op
+  kairoquests.admin.complete:
+    default: op
+  kairoquests.admin.stats:
+    default: op
